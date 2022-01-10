@@ -1,6 +1,7 @@
 #import calculator    #we can also write from calculator import * (* means everything)
 #from calculator import add,subtract # in this case we only import add and subtract from calculator
 from calculator import *  # >in this case we canot need write module name like calcultor.
+#import calculator as c #it menas we can write only c at calculator..
 a=19
 b=5
 
