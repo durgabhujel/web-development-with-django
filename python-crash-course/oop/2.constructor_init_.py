@@ -50,7 +50,7 @@ class Vehicle:
         # Instance Variable
         self.company = company   # Obj1.company = "BMW"
 
-    # Adds an instance variable
+    # Adds an instance variablegit 
     def setColor(self, color):  # def setColor(obj1, "brown"):
         self.color = color  # Obj1.color = "brown"
 
@@ -64,18 +64,19 @@ class Vehicle:
 
 # obj1 = Vehicle()  # object creation or instance creation
 # obj1.setColor('red')  # Vehicle.setColor(obj1, "red")
-Obj2=Vehicle('audi')
-print(Obj2.company)
+#Obj2=Vehicle('audi')
+#print(Obj2.company)
 
-
+#we also create multiple object in same class
  
 
-Obj1 = Vehicle("BMW")  #=> Vehicle.__init__(obj1, "BMW")
+Obj1 = Vehicle("BMW")  #=> Vehicle.__init__(obj1, "BMW") or classnmae.constructor(obj)
 Obj1.setColor("brown")  #=> Vehicle.setColor(Obj1, "brown")
 print(Obj1.company)
 
 print(Obj1.getColor())  #=> Vehicle.getColor(Obj1)
 print(Obj1.Vehicle_type)
+print(Vehicle.Vehicle_type)  # it is second method call the class variable
 #print(Obj1.vahicle)
 # # accessing class variable using class name
 # print(Vehicle.vehicle_type)  #=> "Ca     
