@@ -1,19 +1,17 @@
-class car:   # class is a class and car is a class name
-    #attributes and data member  > or variable 
-    a='bmw'
-    b='hundai'
-    c='tesla'
+class Car:
+    # data members/attributes:
+    a = 'BMW'
+    b = 'Audi'
+    c = 'Mercedes'
+    # members functions/methods:
+    def bmw(self):
+        print(f'Hello, I am a {self.a}!')
+    def audi(self):
+        print(f'Hello, I am a {self.b}!')
+    def mercedes(self):
+        print(f'Hello, I am a {self.c}!')
+    def tesla(self):
+        print(f'Hello, I am a Tesla!')
 
-#member function or methods  >functions
-#def bmw(self):
-   #a1='random'
-    # print(f"hello im {self.a}")
-
-#def hundai(self):
-    #print(f"hello im {self.a}")
-
-def tesla(self):
-    print(f"hello im tesla")   
-
-obj1=car()
-obj1.tesla
+def add(a,b):
+    return a+b
