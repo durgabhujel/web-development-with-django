@@ -14,6 +14,7 @@
 class person:
     def __init__(self,name):
         self.name=name
+        print("my name is deepen")
         
     def getName(self):
         return self.name
@@ -33,13 +34,13 @@ class Empolyee(person):               #base class or super clas most be in brack
     def isEmpolyee(self):
         return True
 
-p2=person("deepen")
-p2.getName() 
-print(p2.getName())
-p2.isEmpolyee()
-print(p2.isEmpolyee())
+#p2=person("deepen")
+#p2.getName() 
+#print(p2.getName())
+#p2.isEmpolyee()
+#print(p2.isEmpolyee())
 
-p2=Empolyee("coursely")
+p2=Empolyee("deepen")
 p2.getName()
 p2.isEmpolyee()
 print(p2.getName()) 

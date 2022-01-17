@@ -59,7 +59,7 @@ class Vehicle:
         return self.color  # return Obj1.color
 
     def __str__(self):
-        return f'{self.company} {self.Vehicle_type}'
+        return (f'{self.company} {self.Vehicle_type}')
 
 
 # obj1 = Vehicle()  # object creation or instance creation
@@ -76,7 +76,7 @@ print(Obj1.company)
 
 print(Obj1.getColor())  #=> Vehicle.getColor(Obj1)
 print(Obj1.Vehicle_type)
-print(Vehicle.Vehicle_type)  # it is second method call the class variable
+#print(Vehicle.Vehicle_type)  # it is second method call the class variable
 #print(Obj1.vahicle)
 # # accessing class variable using class name
 # print(Vehicle.vehicle_type)  #=> "Ca     
