@@ -59,7 +59,7 @@ class Vehicle:
         return self.color  # return Obj1.color
 
     def __str__(self):
-        return (f'{self.company} {self.Vehicle_type}')
+        return f'{self.company} {self.Vehicle_type}'
 
 
 # obj1 = Vehicle()  # object creation or instance creation
