@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'blogs' %}" class="nav-links underline mb-4">Back to blogs</a>
+<h1 class="hero-title">
+    {{ blog.title }}
+  </h1>
+  <div class="blogs">
+ 
+    <div class="blog-card">
+    <div class="blog-card-text">
+        <div>
+          <h4 class="blog-card-title">{{ blog.title }}</h4>
+          <p class="blog-card-subtitle">
+            posted by <em>{{ blog.author }}</em> 
+          </p>
+          <p class="blog-card-para">
+            {{ blog.body }}
+          </p>
+        </div>
+        
+      </div>
+
+  </div>
+ 
+</div>
+ 
+
+{% endblock content %}
