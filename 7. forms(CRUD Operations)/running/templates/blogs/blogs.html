@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<div class="flex">
+    <h1 class="hero-title">
+        My recent blogs
+    </h1>
+    <a href="{% url 'blog_create' %}" class="nav-links underline">Create a new blog</a>
+</div>
+
+
+<div class="blogs">
+    {% for blog in blogs %}
+    <div class="blog-card">
+        <div class="blog-card-img">
+            <img src="{{blog.header_image.url}}" alt="" class="img-res">
+        </div>
+        <div class="blog-card-text">
+            <div>
+                {% comment %}
+                <h4 class="blog-card-title">{{ blog.id }}</h4> {% endcomment %}
+                <h4 class="blog-card-title">{{ blog.title }}</h4>
+                <p class="blog-card-subtitle">
+                    posted by <em>{{ blog.author }}</em>
+                </p>
+                <p class="blog-card-para">
+                    {{ blog.subtitle }}
+                </p>
+            </div>
+            <a href="{% url 'blog_detail' blog.id %}" class="blog-card-link">More about this blog ↗</a>
+        </div>
+        <hr class="line">
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
