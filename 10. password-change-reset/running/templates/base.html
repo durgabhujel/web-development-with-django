@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+</head>
+
+<body>
+    <header>
+        <nav class="navigation-bar">
+            <div class="container">
+                <div class="navbar-content">
+                    <a href="{% url 'home' %}" class="nav-logo"><img src="{% static 'img/Deepen1.png' %}" alt="" class="img-responses"></a>
+                    <div class="navbar-links">
+                        <a href="{% url 'about' %}" class="nav-links">About</a>
+                        <a href="{% url 'blogs' %}" class="nav-links">Blogs</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        {% if user.is_authenticated %}
+        <div class="flex">
+          <h2 class="hero-title">Hi {{ user.username }}!</h2>
+          <p><a href="{% url 'logout' %}" class="nav-links color-red">Log out</a></p>
+        </div>
+        <main>
+          <div class="container">
+            {% block content %}
+            {% endblock content %}
+          </div>
+        </main>
+        {% else %}
+        <p class="blog-card-subtitle">You are not logged in.</p>
+        <div class="flex">
+          <a href="{% url 'login' %}" class="nav-links underline">Log In</a>
+          {% endif %}
+          <a href="{% url 'signup' %}" class="nav-links underline">Sign up</a>
+        </div>
+      </div>
+      <div class=flex>
+        <a href="{% url 'password_change' %}" class="nav-links underline">password_change</a>
+        <a href="{% url 'password_reset' %}" class="nav-links underline">password_reset</a>
+
+      </div>
+
+      <div class="container">
+        {% block login %}
+        {% endblock login %}
+      </div>
+      <div class="container">
+        {% block signup %}
+        {% endblock signup %}
+      </div>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <h6 class="footer-title">Deepen Bhujel
+                </h6>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/durgabhujel.durgabhujel.3/" class="social-link"><img src="{% static 'img/a.jpg' %}" alt="" class="img-response"></a>
+                    <a href="https://www.instagram.com/deepenbhujel7/" class="social-link"><img src="{% static 'img/b.jpg' %}" alt="" class="img-response"></a>
+                    <a href="https://github.com/Deepen2056" class="social-link"><img src="{% static 'img/c.jpg' %}" alt="" class="img-response"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

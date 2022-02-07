@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<div class="hero-content">
+    <div class="hero-text">
+        <h1 class="hero-title">
+            Hello I'am Deepen Bhujel(Durga)
+        </h1>
+        <p class="hero-para">"I love to travel to experience things and places that are completely unknown or different to me."</p>
+        <p class="hero-para">
+            I am an allround web developer, with good knowledge of front-end and Backend techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. Also I like working in a team, you'll
+            learn faster and much more. As the saying goes: 'two heads are better than one'.
+        </p>
+    </div>
+    <div class="hero">
+        {% load static %}
+        <img src="{% static 'img/hero.jpg' %}" alt="" class="img-responsive">
+    </div>
+
+</div>
+<div class="skills">
+    <h5>Skills</h5>
+    <div>
+        <p>Python, Django, HTML,CSS, </p>
+        <p>Postgres, MongoDB, Nodejs,Git, Github</p>
+    </div>
+</div>
+<div class="softwares">
+    <h5>Tools</h5>
+    <div>
+        <p>Visual Studio Code, Postman,</p>
+        </p>
+
+    </div>
+</div>
+
+<hr class="line">
+<div class="contact">
+    <h2>Get in touch with me &rarr; </h2>
+    <div class="contact-links">
+        <a href="#">deepen916@gmail.com</a>
+        <a href="mailto:makifkarasu@gmail.com"> contact=9824994232</a>
+        <a href="{% url 'about' %}" target="{% url 'about' %}" ">View Resume</a>
+  </div>
+</div>
+{% endblock content %}
