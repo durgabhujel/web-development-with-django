@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+<a href="{% url 'blogs' %}" class="nav-links underline mb-4">Back to blogs</a>
+<h1 class="hero-title">
+    {{ blog.title }}
+</h1>
+<div class="blogs">
+
+    <div class="blog-card">
+        <div class="blog-card-img">
+            <img src="{{blog.header_image.url}}" alt="" class="img-res">
+        </div>
+        <div class="blog-card-text">
+            <div>
+                <h4 class="blog-card-title">{{ blog.subtitle }}</h4>
+                <p class="blog-card-subtitle">
+                    posted by <em>{{ blog.author }}</em>
+                </p>
+                <p class="blog-card-para">
+                    {{ blog.body }}
+                </p>
+            </div>
+            <div class="flex">
+                <a href="{% url 'blog_edit' blog.pk %}" class="nav-links underline">Edit this blog</a>
+                <a href="{% url 'blog_delete' blog.pk %}" class="nav-links underline color-red">Delete this blog</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

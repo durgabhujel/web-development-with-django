@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+{% block content %}
+<h1 class="hero-title">Edit this blog</h1>
+<div>
+  <form action="" method="POST" class="form" enctype="multipart/form-data">
+    {% csrf_token %} 
+    {{ form }}
+    <button type="submit" value="Save" class="btn"/>Update</button>
+  </form>
+</div>
+{% endblock content %}

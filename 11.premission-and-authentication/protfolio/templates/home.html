@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<div class="hero-content">
+    <div class="hero-text">
+        <h1 class="hero-title">
+            {{pages.title}}
+        </h1>
+
+        <p class="hero-para">{{pages.p1}}</p>
+        <p class="hero-para">
+            {{pages.p2}}
+        </p>
+        </h4>
+    </div>
+    <div class="header-img">
+        <img src="{{pages.header_image.url}}" alt="" class="img-res">
+
+    </div>
+
+</div>
+<div class="skills">
+    <h5>Skills</h5>
+    <div>
+        <p>{{pages.skill1}} {{pages.skill2}}</p>
+
+    </div>
+</div>
+<div class="softwares">
+    <h5>Tools</h5>
+    <div>
+        <p>{{pages.tools}}</p>
+
+    </div>
+    <div class="header-img">
+        <img src="{{pages.header_image2.url}}" alt="" class="img-res">
+
+    </div>
+</div>
+<hr class="line">
+<div class="contact">
+    <h2>Get in touch with me &rarr; </h2>
+    <div class="contact-links">
+        <a href="#">deepen916@gmail.com</a>
+        <a href="mailto:makifkarasu@gmail.com"> contact=9824994232</a>
+        <a href="{% url 'about' %}" target="{% url 'about' %}" ">View Resume</a>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<div class="flex">
+    <h1 class="hero-title">
+        My Profile
+    </h1>
+</div>
+{% if user.is_authenticated %}
+<div class="flex">
+    <h2 class="hero-title">Hi {{ user.username }}!</h2>
+    <p><a href="{% url 'logout' %}" class="nav-links color-red">Log out</a></p>
+</div>
+<div class="profile">
+    <div class="img-res">
+        <img src="{{user.profile_image.url}}" alt="" class="img-res">
+    </div>
+    <h2 class="title">Username : {{ user.username }}</h2>
+    <h2 class="title">Email : {{ user.email }}</h2>
+    <h2 class="title">First Name : {{ user.first_name }}</h2>
+    <h2 class="title">Last Name : {{ user.last_name }}</h2>
+    <h2 class="title">Age : {{ user.age }}</h2>
+</div>
+<div class="">
+    <p><a href="{% url 'password_change' %}" class="nav-links">Change Password</a></p>
+    <p><a href="{% url 'password_reset' %}" class="nav-links">Reset Password</a></p>
+</div>
+
+{% else %}
+<p class="blog-card-subtitle">You are not logged in.</p>
+<div class="flex">
+    <a href="{% url 'login' %}" class="nav-links underline">Log In</a>
+
+    <a href="{% url 'signup' %}" class="nav-links underline">Sign up</a>
+</div>
+</div>
+{% endif %}
+<div class="container">
+    {% block login %} {% endblock login %}
+</div>
+
+<div class="container">
+    {% block signup %} {% endblock signup %}
+</div>
+
+{% endblock content %}
