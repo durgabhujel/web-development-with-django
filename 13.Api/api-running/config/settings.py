@@ -130,3 +130,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+#REST_FRAMEWORK = {
+#'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny',]
+#}
+
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES': [
+'rest_framework.permissions.IsAuthenticated', # new
+]
+}
